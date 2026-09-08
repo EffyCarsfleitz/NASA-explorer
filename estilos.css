@@ -1,0 +1,222 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --bg: #0D1321;
+    --surface: #161F35;
+    --surface-border: #26314D;
+    --text: #E8E6DF;
+    --text-muted: #8891A6;
+    --accent: #D97A4D;
+    --accent-dim: #b8623b;
+    --dust: #8B9DC3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    background-image:
+        radial-gradient(1px 1px at 20% 30%, rgba(232, 230, 223, 0.4), transparent),
+        radial-gradient(1px 1px at 60% 15%, rgba(232, 230, 223, 0.3), transparent),
+        radial-gradient(1px 1px at 80% 60%, rgba(232, 230, 223, 0.35), transparent),
+        radial-gradient(1px 1px at 35% 80%, rgba(232, 230, 223, 0.25), transparent),
+        radial-gradient(1px 1px at 90% 85%, rgba(232, 230, 223, 0.3), transparent);
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    margin: 0;
+    padding: 0 20px 60px;
+    min-height: 100vh;
+}
+
+/* Cabecera */
+header {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 60px 0 30px;
+    border-bottom: 1px solid var(--surface-border);
+}
+
+header h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 2.6rem;
+    line-height: 1.1;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+}
+
+header p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin: 0;
+    max-width: 46ch;
+    line-height: 1.5;
+}
+
+/* Navegación */
+nav {
+    max-width: 640px;
+    margin: 20px auto 0;
+}
+
+nav a {
+    color: var(--dust);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+}
+
+nav a:hover {
+    border-bottom-color: var(--dust);
+}
+
+/* Botón de la página de inicio */
+.boton-pagina {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    color: var(--text);
+    text-decoration: none;
+    padding: 16px 0;
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    border-top: 1px solid var(--surface-border);
+    margin-top: 24px;
+    transition: color 0.15s ease, gap 0.15s ease;
+}
+
+.boton-pagina::after {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 1px;
+    background-color: var(--accent);
+    transition: width 0.15s ease;
+}
+
+.boton-pagina:hover {
+    color: var(--accent);
+}
+
+.boton-pagina:hover::after {
+    width: 30px;
+}
+
+/* Formulario de búsqueda */
+form {
+    max-width: 640px;
+    margin: 30px auto;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--surface-border);
+}
+
+.search-box input {
+    flex: 1;
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text);
+    outline: none;
+    color-scheme: dark;
+}
+
+.search-box input:focus {
+    border-color: var(--dust);
+}
+
+.search-box button {
+    background-color: var(--accent);
+    color: #14100D;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 22px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.search-box button:hover {
+    background-color: var(--accent-dim);
+}
+
+/* Error */
+.error {
+    max-width: 640px;
+    margin: 0 auto 24px;
+    background-color: rgba(217, 122, 77, 0.1);
+    border-left: 3px solid var(--accent);
+    color: var(--text);
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+/* Tarjeta de resultado */
+.card {
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.card .avatar,
+.card iframe {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 420px;
+}
+
+.card iframe {
+    height: 360px;
+}
+
+.card h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--text);
+    margin: 24px 24px 6px;
+    text-transform: none;
+}
+
+.subtitulo {
+    color: var(--dust);
+    font-size: 0.85rem;
+    margin: 0 24px 18px;
+    letter-spacing: 0.02em;
+}
+
+.card p:not(.subtitulo) {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin: 0 24px 24px;
+}
+
+/* Mensaje inicial */
+.default-msg {
+    color: var(--text-muted);
+    margin-top: 20px;
+    text-align: center;
+}
