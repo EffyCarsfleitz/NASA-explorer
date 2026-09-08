@@ -4,11 +4,11 @@ Aplicación web en PHP que consume la API pública de la NASA para explorar dato
 
 ## Capturas
 
-![Pantalla de inicio](capturas/inicio.png) 
+![Pantalla de inicio](capturas/inicio.PNG) 
 
-![Búsqueda](capturas/busqueda.png) 
+![Búsqueda](capturas/busqueda.PNG) 
 
-![Resultado de búsqueda APOD](capturas/resultado-busqueda.png)
+![Resultado de búsqueda APOD](capturas/resultado-busqueda.PNG)
 
 ## Funcionalidades
 
